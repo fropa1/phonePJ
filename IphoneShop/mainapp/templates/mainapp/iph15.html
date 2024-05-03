@@ -1,25 +1,23 @@
 {% extends 'mainapp/base.html' %}
 {% load static %}
-{% block title %}Iphone15{% endblock %}
+{% block title %}IShop{% endblock %}
 
 {% block content %}
     <section class="container">
         <nav class="group-1">
-            <span class="Timurka-Store">Timurka Store</span>
+            <span class="IShop">IShop</span>
             <div class="group-2">
-                <a href="{% url 'home' %}" class="home">home</a>
-                <a href="{% url 'about' %}" class="about">about</a>
-                <a href="{% url 'services' %}" class="services">services</a>
+                <a href="{% url 'home' %}" class="home">На главную</a>
+                <a href="{% url 'services' %}" class="services">Наши сервисы</a>
                 
             </div>
         </nav>
         <div class="card1">
-            <img src="{% static 'mainapp/media/image1.png' %}" alt="" class="img1">
+            <img src="{% static 'mainapp/media/image3.png' %}" alt="" class="img1">
             <h2 class="name1">{{ telephone1.name }}</h2>
             <p class="desc desc1">Цвета:<br>{% for el in models %}{{ el.color }}<br>{% endfor %} <br>
-                Память:{% for el in modelsp %}{{ el.memory }}{% endfor %} Gb
             </p>
-            <span class="price price1">Цена: {{ telephone1.price }}₽</span>
+            <span class="price price1">Цена: 149.900 ₽</span>
             <form method="post" >
                 {%  csrf_token %}
                 <div class="inp-arr">
@@ -28,7 +26,6 @@
                     {{ form.mail }}
                     {{ form.color }}
                     {{ form.count }}
-                    {{ form.empl }}
                     {{ form.telephonemod }}
                     <button class="but" type="submit">Отправить заявку</button>
                     <span class="err">{{ error }}</span>
@@ -38,15 +35,16 @@
         
         <footer>
             <div class="Fbot">
-                <p class="contact">CONTACT US</p>
+                <p class="contact">Связь с нами</p>
                 <br>
                 <br>
                 <ul class="spisok">
-                    <li>numb: 7(910)-734-04-40</li>
-                    <li>mail: ganger347008@yandex.ru</li>
-                    <li>addres: Russia, Bruansk, Lenin's st. 126A</li>
+                    <li>Номер: 7(996)-447-89-19</li>
+                    <li>Email: kolzunov07@bk.ru</li>
+                    <li>Адресс:Брянск, пр.Ленина 57, 241050</li>
                 </ul>
             </div>
         </footer>
     </section>
+
 {% endblock %}

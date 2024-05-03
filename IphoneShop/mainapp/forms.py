@@ -12,7 +12,7 @@ class ClientForm15(ModelForm):
             }),
             'numb': NumberInput(attrs={
                 'class': 'number',
-                'placeholder': 'Номер телефона в формате +7'
+                'placeholder': 'Номер телефона +7'
             }),
             'mail': EmailInput(attrs={
                 'class': 'mail',

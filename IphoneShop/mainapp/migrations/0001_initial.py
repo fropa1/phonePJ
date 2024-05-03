@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name='Clients',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=20, verbose_name='ФИО')),
+                ('name', models.CharField(max_length=40, verbose_name='ФИО')),
                 ('numb', models.IntegerField(max_length=15, verbose_name='Номер телефона')),
                 ('mail', models.CharField(max_length=50, verbose_name='Почта')),
                 ('color', models.CharField(max_length=30, verbose_name='Цвет')),
@@ -32,7 +32,7 @@ class Migration(migrations.Migration):
             name='Employees',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=30, verbose_name='ФИО')),
+                ('name', models.CharField(max_length=40, verbose_name='ФИО')),
                 ('numb', models.IntegerField(verbose_name='Номер телефона')),
                 ('post', models.CharField(max_length=30, verbose_name='Должность')),
                 ('salary', models.IntegerField(verbose_name='З\\П')),
